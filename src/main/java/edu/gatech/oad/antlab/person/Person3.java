@@ -1,13 +1,15 @@
 package edu.gatech.oad.antlab.person;
+
 /**
  *  A simple class for person 3
  *  returns their name and a
  *  reversed string 
  *  
- *  @author  Bob
+ *  @author  Roshan Siwakoti
  *  @version 1.1
  */
 public class Person3 {
+	
    /** Holds the persons real name */  
 	private String name;
 	
@@ -42,7 +44,9 @@ public class Person3 {
 	 * @return the reversed string
 	 */
 	private String calc(String input) {
-	  //Person 3 put your implementation here
-	  return null;
+			if ((null == input) || (input.length() <= 1)) {
+				return input;
+			}
+			return calc(input.substring(1)) + input.charAt(0);
+		}
 	}
-}
