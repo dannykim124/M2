@@ -10,7 +10,7 @@ import edu.gatech.oad.antlab.pkg2.*;
  * CS2335 Ant Lab
  *
  * Prints out a simple message gathered from all of the other classes
- * in the package structure
+ * in the package
  */
  public class AntLabMain {
 
