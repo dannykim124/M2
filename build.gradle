@@ -14,7 +14,7 @@ dependencies {
     compile files('lib/resources.jar')
     testCompile 'junit:junit:4.12'
 }
-// defaultTasks 'clean', 'run'
+ defaultTasks 'clean', 'run'
 //
 task outPutJavaDoc(type: Javadoc) {
     source = sourceSets.main.allJava
@@ -22,16 +22,17 @@ task outPutJavaDoc(type: Javadoc) {
 //
 task fatJar(type: Jar) {
 	manifest {
-        attributes 'Implementation-Title': 'Gradle Jar File Example',
+        attributes( 'Implementation-Title': 'M2 practice',
         	'Implementation-Version': version,
-        	'Main-Class': 'AntLabMain',
-            'Class-Path' : 'D:/Danny/cs2340/Ocean-s-5/lib'
+        	'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+            "Class-Path": 'lib/resources.jar'
+        )
     }
     baseName = project.name + '-all'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }
-//
-// repositories {
-//     mavenCentral()
-// }
+
+repositories {
+    mavenCentral()
+}
