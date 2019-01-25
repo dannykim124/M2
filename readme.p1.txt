@@ -1,2 +1,2 @@
 Komal Shrivastava
-kshrivastava32
+komals@gatech.edu
